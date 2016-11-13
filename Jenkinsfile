@@ -1,7 +1,5 @@
 stage 'release'
 node {
-	echo "env.BRANCH_NAME : " env.BRANCH_NAME
-    if(env.BRANCH_NAME == 'develop') {
         deleteDir()
 
         checkout scm
@@ -16,8 +14,4 @@ node {
         sh 'git checkout master'
 
 
-    } else {
-        echo "Current branch : "
-        echo env.BRANCH_NAME
-    }
 }
