@@ -4,6 +4,11 @@
   <artifactId>ZJGitFlow2</artifactId>
   <version>0.0.4-SNAPSHOT</version>
   
+   <scm>
+        <developerConnection>scm:git@github.com:izouari/repoJGITFlow2.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+  
   <build>
 		<plugins>
 			<plugin>
