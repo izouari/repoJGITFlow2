@@ -1,5 +1,6 @@
 stage 'release'
 node {
+	echo "env.BRANCH_NAME : " env.BRANCH_NAME
     if(env.BRANCH_NAME == 'develop') {
         deleteDir()
 
