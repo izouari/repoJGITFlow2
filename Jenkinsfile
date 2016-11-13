@@ -8,8 +8,7 @@ node {
 
         def mvnHome = tool 'M3'
 
-        sh "$mvnHome/bin/mvn clean jgitflow:release-start"
-        sh "$mvnHome/bin/mvn clean jgitflow:release-finish -Dmaven.javadoc.skip=true"
+        sh "${mvnHome}/bin/mvn clean"
 
         sh 'git checkout master'
 
