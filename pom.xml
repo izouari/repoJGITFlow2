@@ -24,6 +24,10 @@
 						<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
 						<versionTagPrefix />
 					</flowInitContext>
+					<configuration>
+				        <username>izouari</username>
+				        <password>adp+2016+</password>
+				    </configuration>
 					<enableSshAgent>true</enableSshAgent>
 					<useReleaseProfile>false</useReleaseProfile>
 					<pushReleases>true</pushReleases>
