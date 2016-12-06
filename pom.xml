@@ -2,12 +2,23 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.enedis</groupId>
   <artifactId>ZJGitFlow2</artifactId>
-  <version>0.0.6</version>
+  <version>0.0.11</version>
   
    <scm>
         <developerConnection>scm:git@github.com:izouari/repoJGITFlow2.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
+    
+    <repositories>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://localhost:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<repository>
+			<id>nexus-snapshots</id>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+		</repository>
+	</repositories>
   
   <build>
 		<plugins>
@@ -24,6 +35,8 @@
 						<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
 						<versionTagPrefix />
 					</flowInitContext>
+			        <username>izouari</username>
+			        <password>adp+2016+</password>
 					<enableSshAgent>true</enableSshAgent>
 					<useReleaseProfile>false</useReleaseProfile>
 					<pushReleases>true</pushReleases>
@@ -31,4 +44,16 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<!-- Deployement pour les Releases -->
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://localhost:8081/nexus/content/repositories/releases</url>
+		</repository>
+	</distributionManagement>
 </project>
