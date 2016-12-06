@@ -1,5 +1,7 @@
-stage 'release'
 node {
+		
+		stage 'release'
+		echo "Initialisation stage release"
         deleteDir()
 
         checkout scm
