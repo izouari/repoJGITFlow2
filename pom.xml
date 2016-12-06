@@ -8,6 +8,17 @@
         <developerConnection>scm:git@github.com:izouari/repoJGITFlow2.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
+    
+    <repositories>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://localhost:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<repository>
+			<id>nexus-snapshots</id>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+		</repository>
+	</repositories>
   
   <build>
 		<plugins>
@@ -33,4 +44,16 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<!-- Deployement pour les Releases -->
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://localhost:8081/nexus/content/repositories/releases</url>
+		</repository>
+	</distributionManagement>
 </project>
